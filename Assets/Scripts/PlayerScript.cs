@@ -6,9 +6,10 @@ public class PlayerScript : MonoBehaviour {
 	public const float SPRINT_COST = 10f;
 	public const float SHOOT_COST = 10f;
 
-
 	public float speed = 3;
 	public OxygenManager oxy;
+
+	public GameObject projectile;
 
 
 
@@ -58,8 +59,7 @@ public class PlayerScript : MonoBehaviour {
 			//Check Oxygen
 			if (oxy.PayOxygenCost (SPRINT_COST)) {
 				//If oxygen is good, shoot
-				//TODO: spawn a projectile
-				Debug.Log("Yo dude. You shot. Yeah, that's it.");
+				GameObject.Instantiate (projectile);
 			} else {
 				//TODO: give the user some actual feedback
 				Debug.Log ("Not enough oxygen");
