@@ -18,6 +18,22 @@ public class OxygenManager : MonoBehaviour {
 	void Update () {
 	
 		oxygen -= OXYGEN_LOSS_PER_TIME * Time.deltaTime;
+		if (oxygen <= 0) {
+			//Something bad
+		}
 
 	}
+
+	public bool PayOxygenCost(float amount)
+	{
+		if (oxygen < amount) {
+			return false;
+		} else {
+			oxygen -= amount;
+			return true;
+		}
+
+	}
+
+
 }

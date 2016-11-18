@@ -3,7 +3,14 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 
-	float speed = 3;
+	public const float SPRINT_COST = 10f;
+	public const float SHOOT_COST = 10f;
+
+
+	public float speed = 3;
+	public OxygenManager oxy;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -32,17 +39,31 @@ public class PlayerScript : MonoBehaviour {
 		//Skills
 
 		//Sprint
-		if (Input.GetKey (KeyCode.J))
+		if (Input.GetKeyDown (KeyCode.J))
 		{
 			//Check Oxygen
-			//If oxygen is good, sprint
+			if (oxy.PayOxygenCost (SPRINT_COST)) {
+				//If oxygen is good, sprint
+				transform.position = transform.position + new Vector3 (speed * Time.deltaTime * 10, 0, 0);
+			} else {
+				//TODO: give the user some actual feedback
+				Debug.Log ("Not enough oxygen");
+			}
+
 		}
 
 		//Shoot
-		if (Input.GetKey (KeyCode.J))
+		if (Input.GetKeyDown (KeyCode.K))
 		{
 			//Check Oxygen
-			//If oxygen is good, shoot
+			if (oxy.PayOxygenCost (SPRINT_COST)) {
+				//If oxygen is good, shoot
+				//TODO: spawn a projectile
+				Debug.Log("Yo dude. You shot. Yeah, that's it.");
+			} else {
+				//TODO: give the user some actual feedback
+				Debug.Log ("Not enough oxygen");
+			}
 		}
 
 			
