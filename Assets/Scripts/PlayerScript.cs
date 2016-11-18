@@ -3,8 +3,10 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 
-	public const float SPRINT_COST = 10f;
-	public const float SHOOT_COST = 10f;
+	public const float SPRINT_COST = 15f;
+	public const float SHOOT_COST = 15f;
+	public const float SPEED_COST = 20f;
+	public const float SPEED_MULTIPLIER = 20f;
 	public const float SPRINT_SPEED = 30f;
 	public const float SPRINT_DURATION = 0.2f;
 	public const float BASE_SPEED = 5f;
@@ -18,6 +20,8 @@ public class PlayerScript : MonoBehaviour {
 
 	private bool sprinting = false;
 	private float sprintingTimer = 0f;
+
+	private bool accelerated = false;
 
 	// Use this for initialization
 	void Start () {
@@ -95,6 +99,24 @@ public class PlayerScript : MonoBehaviour {
 			} else {
 				//TODO: give the user some actual feedback
 				Debug.Log ("Not enough oxygen");
+			}
+		}
+
+		//IncreaseSpeed
+		if (Input.GetKey (KeyCode.L)) {
+			//Check Oxygen
+			if (oxy.PayOxygenCost (SPRINT_COST * Time.deltaTime)) {
+				//If oxygen is good, shoot
+				accelerated = true;
+				speed = SPEED_MULTIPLIER;
+			} else {
+				//TODO: give the user some actual feedback
+				Debug.Log ("Not enough oxygen");
+			}
+		} else {
+			if (accelerated) {		
+				speed = BASE_SPEED;
+				accelerated = false;
 			}
 		}
 
