@@ -19,6 +19,7 @@ public class PlayerScript : MonoBehaviour {
 
 	void HandleInput()
 	{
+		// Movement
 		if (Input.GetKey (KeyCode.A))
 			transform.position = transform.position - new Vector3 (speed * Time.deltaTime, 0, 0);
 		if (Input.GetKey (KeyCode.S))
@@ -27,5 +28,23 @@ public class PlayerScript : MonoBehaviour {
 			transform.position = transform.position + new Vector3 (speed * Time.deltaTime, 0, 0);
 		if (Input.GetKey (KeyCode.W))
 			transform.position = transform.position + new Vector3 (0, speed * Time.deltaTime, 0);
+
+		//Skills
+
+		//Sprint
+		if (Input.GetKey (KeyCode.J))
+		{
+			//Check Oxygen
+			//If oxygen is good, sprint
+		}
+
+		//Shoot
+		if (Input.GetKey (KeyCode.J))
+		{
+			//Check Oxygen
+			//If oxygen is good, shoot
+		}
+
+			
 	}
 }
