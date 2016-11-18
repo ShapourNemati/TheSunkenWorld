@@ -16,4 +16,12 @@ public class ProjectileBehaviour : MonoBehaviour {
 		transform.position = transform.position + new Vector3 (speed * Time.deltaTime, 0, 0);
 
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		//if enemy trap them and disable their attack
+		//if player, ignore
+		//if Poseidon deal damage?
+		//should not be other cases
+	}
 }

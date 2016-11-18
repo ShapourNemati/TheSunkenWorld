@@ -37,6 +37,7 @@ GameObject:
   - 4: {fileID: 4000010464553598}
   - 114: {fileID: 114000010862987700}
   - 114: {fileID: 114000012916665968}
+  - 60: {fileID: 60000013678627106}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -71,6 +72,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010464553598}
   m_RootOrder: 0
+--- !u!60 &60000013678627106
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013218100496}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.07589805, y: 2.5938494}
+      - {x: 2.7220006, y: 2.054661}
+      - {x: -0.39888376, y: 0.17765176}
+      - {x: -1.2202649, y: -2.2257717}
+      - {x: -2.848496, y: -2.3473983}
 --- !u!114 &114000010862987700
 MonoBehaviour:
   m_ObjectHideFlags: 1

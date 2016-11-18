@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour {
 
 	public GameObject projectile;
 
+	public int health = 100;
 
 
 	// Use this for initialization
@@ -22,7 +23,22 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
 	
 		HandleInput ();
+		CheckDead ();
 
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		//if enemy decrease health
+		//if our own projectile, ignore
+		//should not be other cases
+	}
+
+	void CheckDead()
+	{
+		if (health <= 0) {
+			//reload level?
+		}
 	}
 
 	void HandleInput()
