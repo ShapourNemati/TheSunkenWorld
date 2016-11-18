@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using AssemblyCSharp;
 
 public class ProjectileBehaviour : MonoBehaviour {
 
@@ -19,6 +20,11 @@ public class ProjectileBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		var capturable = other.GetComponent<ICapturable> ();
+		if (capturable != null) {
+			capturable.GetCaptured ();
+			GameObject.Destroy (gameObject);
+		}
 		//if enemy trap them and disable their attack
 		//if player, ignore
 		//if Poseidon deal damage?
