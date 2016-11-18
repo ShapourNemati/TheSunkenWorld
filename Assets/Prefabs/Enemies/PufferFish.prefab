@@ -115,6 +115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
+  UPPER_LIMIT: 1.5
+  LOWER_LIMIT: -1.5
+  speed: 0
+  up: 1
 --- !u!212 &212000011554309676
 SpriteRenderer:
   m_ObjectHideFlags: 1
