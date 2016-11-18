@@ -4,6 +4,7 @@ using AssemblyCSharp;
 
 public class MermaidBehaviour : MonoBehaviour, ICapturable {
 
+	public const int DMG = 10;
 	public bool active = true;
 
 	public void GetCaptured()
@@ -23,10 +24,12 @@ public class MermaidBehaviour : MonoBehaviour, ICapturable {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (active)
-			Debug.Log ("I'm harming the player. I swear");
-		else
-			Debug.Log ("Don't you worry don't you worry child");
+		if (active) {
+			var playerScript = other.GetComponent<PlayerScript>();
+			if (playerScript != null) {
+				playerScript.TakeDamage (DMG);
+			}
+		}
 	}
 
 }

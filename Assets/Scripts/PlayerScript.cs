@@ -52,6 +52,12 @@ public class PlayerScript : MonoBehaviour {
 		//should not be other cases
 	}
 
+	public void TakeDamage(int amount)
+	{
+		health -= amount;
+		Debug.Log ("Ouch!");
+	}
+
 	void CheckDead()
 	{
 		if (health <= 0) {
