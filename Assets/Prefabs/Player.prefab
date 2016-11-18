@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdf18fe5bba79c4a83b52e515cc4db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygen: 100
+  oxygen: 250
 --- !u!212 &212000012040158072
 SpriteRenderer:
   m_ObjectHideFlags: 1

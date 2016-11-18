@@ -45,6 +45,12 @@ public class PlayerScript : MonoBehaviour {
 
 	}
 
+	public void GainOxygen(float amount)
+	{
+		oxy.oxygen += amount;
+		Debug.Log ("Oxygen gained: " + amount + ". Current: " + oxy.oxygen); 
+	}
+
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		//if enemy decrease health
