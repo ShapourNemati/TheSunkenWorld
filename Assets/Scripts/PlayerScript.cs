@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour {
 	public OxygenManager oxy;
 
 	public GameObject projectile;
+	public GameObject ProjectileSpawnLocation;
 
 	public int health = 100;
 
@@ -95,7 +96,7 @@ public class PlayerScript : MonoBehaviour {
 			//Check Oxygen
 			if (oxy.PayOxygenCost (SPRINT_COST)) {
 				//If oxygen is good, shoot
-				GameObject.Instantiate (projectile);
+				GameObject.Instantiate (projectile, ProjectileSpawnLocation.transform.position, Quaternion.identity);
 			} else {
 				//TODO: give the user some actual feedback
 				Debug.Log ("Not enough oxygen");
