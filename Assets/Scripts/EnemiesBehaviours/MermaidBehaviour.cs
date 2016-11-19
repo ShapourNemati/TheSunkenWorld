@@ -8,6 +8,8 @@ public class MermaidBehaviour : MonoBehaviour, ICapturable {
 	public bool active = true;
 	public float speed = 7;
 
+	public AudioClip[] SoundEffects;
+
 	public void GetCaptured()
 	{
 		active = false;
@@ -15,7 +17,9 @@ public class MermaidBehaviour : MonoBehaviour, ICapturable {
 
 	// Use this for initialization
 	void Start () {
-	
+		AudioSource Audio = GetComponent<AudioSource>();
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
+		Audio.Play();
 	}
 	
 	// Update is called once per frame
