@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviour {
 	public const float SPRINT_DURATION = 0.2f;
 	public const float BASE_SPEED = 5f;
 
+	public GameObject retryText;
+
 	public GameObject confusedSprite;
 
 	public float speed = BASE_SPEED ;
@@ -83,6 +85,7 @@ public class PlayerScript : MonoBehaviour {
 	void CheckDead()
 	{
 		if (health <= 0 && this.enabled) {
+			retryText.SetActive (true);
 			transform.Rotate (new Vector3(0,0,180));
 			this.enabled = false;
 		}
