@@ -8,11 +8,13 @@ public class MermaidBehaviour : MonoBehaviour, ICapturable {
 	public bool active = true;
 	public float speed = 7;
 
+	public GameObject bubble;
 	public AudioClip[] SoundEffects;
 
 	public void GetCaptured()
 	{
 		active = false;
+		bubble.SetActive (true);
 	}
 
 	// Use this for initialization
@@ -27,7 +29,11 @@ public class MermaidBehaviour : MonoBehaviour, ICapturable {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = transform.position - new Vector3 (speed * Time.deltaTime, 0, 0);
+		if (active)
+			transform.position = transform.position - new Vector3 (speed * Time.deltaTime, 0, 0);
+		else
+			transform.position = transform.position + new Vector3 (0, speed * Time.deltaTime, 0);
+
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

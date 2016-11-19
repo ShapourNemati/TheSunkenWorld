@@ -72,13 +72,11 @@ public class PoseidonBehaviour : MonoBehaviour {
 
 			//cast the spell
 			s.Cast ();
-			Debug.Log ("Speel cast: " + s);
 			if (doubleTheFun) {
 				//pick a random skill
 				s = attacks [(int)(Random.value * attacks.Length)];
 				//cast the spell
 				s.Cast ();
-				Debug.Log ("Speel cast: " + s);
 			}
 			timer = timeBetweenAttacks;
 			attackAnimationIsOff = true;
@@ -115,6 +113,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 		case 0:
 			//You won!
 			//Time to choose: are you with Poseidon or against him?
+			Debug.Log ("YOU WON THE GAME. Gj dude, gj");
 			break;
 		}
 	}
