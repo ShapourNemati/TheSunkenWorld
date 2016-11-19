@@ -6,7 +6,7 @@ public class FlipYourAss : MonoBehaviour, ISkill {
 
 
 	bool active = false;
-	float duration = 2f;
+	float duration = 1.5f;
 
 	public void Cast() {
 		GameObject.Instantiate (this);

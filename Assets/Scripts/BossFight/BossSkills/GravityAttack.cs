@@ -5,8 +5,8 @@ using AssemblyCSharp;
 public class GravityAttack : MonoBehaviour , ISkill{
 
 	bool active = false;
-	float duration = 2f;
-	float intensity = 10f;
+	float duration = 1.5f;
+	float intensity = 8f;
 
 	public void Cast() {
 		GameObject.Instantiate (this);

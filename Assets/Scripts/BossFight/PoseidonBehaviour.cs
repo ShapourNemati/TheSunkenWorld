@@ -16,7 +16,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 
 	public GameObject [] attacksObjs;
 	ISkill[] attacks;
-	public float timeBetweenAttacks = 3f;
+	public float timeBetweenAttacks = 5f;
 	float timer = 0;
 
 	public GameObject[] timedSpawnersObj;
@@ -91,8 +91,8 @@ public class PoseidonBehaviour : MonoBehaviour {
 
 		switch (rings) {
 		case 4:
-			//increment skill rate by 25%
-			timeBetweenAttacks=2f;
+			//increment skill rate by 20%
+			timeBetweenAttacks=4f;
 			break;
 		case 3:
 			//spawn a wave of enemies

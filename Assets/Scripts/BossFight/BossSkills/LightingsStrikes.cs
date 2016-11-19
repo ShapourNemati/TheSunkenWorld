@@ -5,7 +5,7 @@ using AssemblyCSharp;
 public class LightingsStrikes : MonoBehaviour, ISkill {
 
 	public GameObject Lightning;
-	public float offset = 10;
+	public float offset = 15;
 
 	public void Cast()
 	{
