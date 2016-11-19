@@ -2014,6 +2014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb7b51bf18ead9419d0f04d529fab04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
   attacksObjs:
   - {fileID: 1000014258130270, guid: 70d40cff348fd694295ad6de0f3b957e, type: 2}
   - {fileID: 1000014095348546, guid: 9255f70fa0bedba46bc37ce3c9537fb0, type: 2}
