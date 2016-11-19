@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviour {
 	public const float SPEED_MULTIPLIER = 6f;
 	public const float SPRINT_SPEED = 14f;
 	public const float SPRINT_DURATION = 0.2f;
-	public const float BASE_SPEED = 2f;
+	public const float BASE_SPEED = 5f;
 
 	public GameObject confusedSprite;
 

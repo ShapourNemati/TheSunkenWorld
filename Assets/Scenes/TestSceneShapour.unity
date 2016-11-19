@@ -1419,6 +1419,7 @@ MonoBehaviour:
   projectile: {fileID: 1000013585461212, guid: 69795f4eef9b90d41add32890d5e3135, type: 2}
   ProjectileSpawnLocation: {fileID: 1713849202}
   health: 100
+  SoundEffects: []
 --- !u!4 &1387491945
 Transform:
   m_ObjectHideFlags: 0

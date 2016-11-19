@@ -13,17 +13,17 @@ public class LightingsStrikes : MonoBehaviour, ISkill {
 
 
 		//leftlightning
-		Vector3 targetPos = new Vector3(-offset, playerPos.y, playerPos.z);
-		GameObject.Instantiate (Lightning, targetPos, Quaternion.identity);
+		//Vector3 targetPos = new Vector3(-offset, playerPos.y, playerPos.z);
+		//GameObject.Instantiate (Lightning, targetPos, Quaternion.identity);
 
 
 		//middle lightning
-		targetPos = playerPos;
+		Vector3 targetPos = playerPos;
 		GameObject.Instantiate (Lightning, targetPos, Quaternion.identity);
 
 		//right lightning
-		targetPos = new Vector3(offset, playerPos.y, playerPos.z);
-		GameObject.Instantiate (Lightning, targetPos, Quaternion.identity);
+		//targetPos = new Vector3(offset, playerPos.y, playerPos.z);
+		//GameObject.Instantiate (Lightning, targetPos, Quaternion.identity);
 
 	}
 
