@@ -82,7 +82,8 @@ public class PlayerScript : MonoBehaviour {
 
 	void CheckDead()
 	{
-		if (health <= 0) {
+		if (health <= 0 && this.enabled) {
+			transform.Rotate (new Vector3(0,0,180));
 			this.enabled = false;
 		}
 	}
