@@ -4,7 +4,7 @@ using AssemblyCSharp;
 
 public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 
-	public const int DMG = 30;
+	public const int DMG = 15;
 	public bool active = true;
 	public float UPPER_LIMIT = 1f;
 	public float LOWER_LIMIT = -1f;

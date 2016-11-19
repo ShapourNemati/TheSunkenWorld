@@ -5,7 +5,7 @@ public class SharkBehaviour : MonoBehaviour {
 
 	public GameObject target;
 
-	public const int DMG = 50;
+	public const int DMG = 20;
 	public bool active = true;
 	public float horizontalSpeed = 10f;
 
