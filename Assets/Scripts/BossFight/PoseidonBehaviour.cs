@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
+using UnityEngine.UI;
 
 public class PoseidonBehaviour : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class PoseidonBehaviour : MonoBehaviour {
 			Debug.Log ("A spell is being cast");
 		}
 	}
+
+	public GameObject text;
 
 	int rings = 5;
 
@@ -91,6 +94,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 		case 4:
 			//increment skill rate by 20%
 			timeBetweenAttacks=4f;
+			text.GetComponent<Text>().text = "Gems: 1/5";
 			break;
 		case 3:
 			//spawn a wave of enemies
@@ -98,19 +102,23 @@ public class PoseidonBehaviour : MonoBehaviour {
 			foreach (TriggerSpawner ts in triggerSpawners) {
 				ts.Spawn ();
 			}
+			text.GetComponent<Text>().text = "Gems: 2/5";
 			break;
 		case 2:
 			//send two skills at a time
 			doubleTheFun = true;
 			break;
+			text.GetComponent<Text>().text = "Gems: 3/5";
 		case 1:
 			//continuous spawn of enemies
 			//done by activating some inactive timed spawners
 			foreach (TimedSpawner ts in timedSpawners) {
 				ts.enabled = true;
 			}
+			text.GetComponent<Text>().text = "Gems: 4/5";
 			break;
 		case 0:
+			text.GetComponent<Text>().text = "Gems: 5/5";
 			//You won!
 			//Time to choose: are you with Poseidon or against him?
 			Debug.Log ("YOU WON THE GAME. Gj dude, gj");
