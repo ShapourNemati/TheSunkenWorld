@@ -10,6 +10,7 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 	public float LOWER_LIMIT = -1f;
 	public float speed = 0;
 	public bool up = true;
+	public bool vertical = false;
 
 	public AudioClip[] SoundEffects;
 
@@ -33,7 +34,10 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = transform.position + new Vector3 (0, speed * Time.deltaTime, 0);
+		if (vertical)
+			transform.position = transform.position + new Vector3 (0, speed * Time.deltaTime, 0);
+		else
+			transform.position = transform.position + new Vector3 (speed * Time.deltaTime,0, 0);
 		if (up) {
 			speed += Time.deltaTime;
 			if (speed >= UPPER_LIMIT)

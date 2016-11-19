@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012392338664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2967186, y: 0.8454422, z: 0}
+  m_LocalPosition: {x: 3.2474465, y: 2.502728, z: 90}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -194,6 +194,7 @@ MonoBehaviour:
   LOWER_LIMIT: -1.5
   speed: 0
   up: 1
+  vertical: 1
   SoundEffects:
   - {fileID: 8300000, guid: 27a010c62526569408da2340ed139284, type: 3}
 --- !u!212 &212000011554309676
