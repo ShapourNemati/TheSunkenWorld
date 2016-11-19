@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8965afdd20b614c4290ef59e3fd911b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewScene: 
+  NewScene: _Space
   Button: 32
 --- !u!1 &914977157
 GameObject:
