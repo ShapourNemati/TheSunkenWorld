@@ -9,9 +9,13 @@ public class LightningBehaviour : MonoBehaviour {
 
 	public BoxCollider2D myCollider;
 
+	public AudioClip[] SoundEffects;
+
 	// Use this for initialization
 	void Start () {
-
+		AudioSource Audio = GetComponent<AudioSource>();
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length)];
+		Audio.Play();
 	}
 
 	// Update is called once per frame

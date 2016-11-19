@@ -265,12 +265,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 490802098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff6b9a19c37e0d4cbb5e6253139e5f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e9b87afd1b3e04ab2d57861012d56b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextPath: Assets/IntroText.txt
-  MessageText: {fileID: 1872244108}
-  LinesDisplay: 5
+  attacksObjs:
+  - {fileID: 1000010035458374, guid: a52df734fbf19ff4e9036831d561a0f2, type: 2}
 --- !u!1 &1016622565
 GameObject:
   m_ObjectHideFlags: 0

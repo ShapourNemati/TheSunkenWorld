@@ -53,3 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lightning: {fileID: 1000011289895566, guid: fd8b2e061e2508c4aa79598079f3107f, type: 2}
   offset: 10
+  SoundEffects:
+  - {fileID: 8300000, guid: 8158bde4f7894084cb3f496da2e06943, type: 3}
+  - {fileID: 8300000, guid: ca46896134cd30a49b685758c350572b, type: 3}
+  - {fileID: 8300000, guid: 0648eb68c8c56cf49a0d5e19200332db, type: 3}
