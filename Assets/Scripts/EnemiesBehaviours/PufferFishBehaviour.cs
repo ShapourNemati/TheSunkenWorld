@@ -25,7 +25,10 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 	void Start () {
 		AudioSource Audio = GetComponent<AudioSource>();
 		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
-		Audio.Play();
+		int RandomNr = Random.Range(0, 1);
+		if (RandomNr == 0) {
+			Audio.Play();
+		}
 	}
 	
 	// Update is called once per frame
