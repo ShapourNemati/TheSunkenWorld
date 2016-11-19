@@ -191,3 +191,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacksObjs:
   - {fileID: 1000010035458374, guid: a52df734fbf19ff4e9036831d561a0f2, type: 2}
+--- !u!1001 &969198536
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013610420030, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.8481898
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013610420030, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.3856058
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013610420030, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013610420030, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013610420030, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013610420030, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013610420030, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013610420030, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 039f2d52c9c14854f9364acaf1d8ae85, type: 2}
+  m_IsPrefabParent: 0
