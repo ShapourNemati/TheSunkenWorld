@@ -366,6 +366,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010771137004, guid: 01ee21d8f83b97042870c9ed5d45c42a,
     type: 2}
   m_PrefabInternal: {fileID: 291640950}
+--- !u!4 &292882866 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011783623862, guid: 442e569696545654db5a1970da59790f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1112409643}
 --- !u!1001 &415983169
 Prefab:
   m_ObjectHideFlags: 0
@@ -1693,19 +1698,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1641973292}
+    m_TransformParent: {fileID: 292882866}
     m_Modifications:
     - target: {fileID: 4000011020492754, guid: fceacea577a2d864b811ab5a2789d1fb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.949565
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011020492754, guid: fceacea577a2d864b811ab5a2789d1fb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.1731787
+      value: 0.85522413
       objectReference: {fileID: 0}
     - target: {fileID: 4000011020492754, guid: fceacea577a2d864b811ab5a2789d1fb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -3.484375
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011020492754, guid: fceacea577a2d864b811ab5a2789d1fb, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1725,25 +1730,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011020492754, guid: fceacea577a2d864b811ab5a2789d1fb, type: 2}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010947560006, guid: fceacea577a2d864b811ab5a2789d1fb, type: 2}
-      propertyPath: m_Name
-      value: PoseidonsPowerCircle (4)
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000012431032950, guid: fceacea577a2d864b811ab5a2789d1fb,
         type: 2}
       propertyPath: poseidonBehaviour
       value: 
       objectReference: {fileID: 1112409644}
+    - target: {fileID: 1000010947560006, guid: fceacea577a2d864b811ab5a2789d1fb, type: 2}
+      propertyPath: m_Name
+      value: PoseidonsPowerCircle (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fceacea577a2d864b811ab5a2789d1fb, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1314460081 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000011020492754, guid: fceacea577a2d864b811ab5a2789d1fb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1314460080}
 --- !u!1001 &1344982341
 Prefab:
   m_ObjectHideFlags: 0
@@ -1878,7 +1878,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1314460081}
   - {fileID: 1994009467}
   - {fileID: 1150751390}
   - {fileID: 2008111019}

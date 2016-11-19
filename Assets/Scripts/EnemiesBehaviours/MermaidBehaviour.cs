@@ -4,7 +4,7 @@ using AssemblyCSharp;
 
 public class MermaidBehaviour : MonoBehaviour, ICapturable {
 
-	public const int DMG = 10;
+	public const int DMG = 20;
 	public bool active = true;
 	public float speed = 7;
 

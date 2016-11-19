@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SharkBehaviour : MonoBehaviour {
 
-	public const int DMG = 10;
+	public const int DMG = 50;
 	public bool active = true;
 	public float horizontalSpeed = 10f;
 
