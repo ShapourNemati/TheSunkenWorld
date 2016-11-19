@@ -22,6 +22,6 @@ public class IfYouLoveItThenYouShouldHavePutARingOnIt : MonoBehaviour {
 
 	public void SpawnARing()
 	{
-		GameObject.Instantiate (ring);
+		GameObject.Instantiate (ring, transform.position, Quaternion.identity);
 	}
 }
