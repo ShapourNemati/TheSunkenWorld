@@ -18,7 +18,6 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 		//active = false;
 		// do nothing, PufferFish pops the bubbles
 		Debug.Log ("The pufferfish pops the bubble!");
-	
 	}
 
 
