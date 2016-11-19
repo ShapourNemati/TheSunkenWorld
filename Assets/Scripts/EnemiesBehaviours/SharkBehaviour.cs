@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using AssemblyCSharp;
 
-public class SharkBehaviour : MonoBehaviour {
+public class SharkBehaviour : MonoBehaviour, ICapturable {
 
 	public GameObject target;
 
@@ -11,6 +12,7 @@ public class SharkBehaviour : MonoBehaviour {
 
 	private float delta = .3f;
 
+	public GameObject bubble;
 	public float verticalSpeed = 5;
 	public float BASE_VERTICAL_SPEED = 5;
 
@@ -23,6 +25,7 @@ public class SharkBehaviour : MonoBehaviour {
 	public void GetCaptured()
 	{
 		active = false;
+		bubble.SetActive (true);
 	}
 
 
@@ -39,27 +42,31 @@ public class SharkBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = transform.position - new Vector3 (horizontalSpeed * Time.deltaTime, 0, 0);
+		if (!active)
+			transform.position = transform.position + new Vector3 (0, horizontalSpeed * Time.deltaTime, 0);
+		else {
+			transform.position = transform.position - new Vector3 (horizontalSpeed * Time.deltaTime, 0, 0);
 
-		if (!dontFollow) {
-			if ((target.transform.position.y < transform.position.y) &&
-			    (Mathf.Abs (target.transform.position.y - transform.position.y) > delta)) {
-				verticalSpeed = -1 * BASE_VERTICAL_SPEED;
-			} else if ((target.transform.position.y > transform.position.y) &&
-			           (Mathf.Abs (target.transform.position.y - transform.position.y) > delta)) { 
-				verticalSpeed = BASE_VERTICAL_SPEED;
+			if (!dontFollow) {
+				if ((target.transform.position.y < transform.position.y) &&
+				   (Mathf.Abs (target.transform.position.y - transform.position.y) > delta)) {
+					verticalSpeed = -1 * BASE_VERTICAL_SPEED;
+				} else if ((target.transform.position.y > transform.position.y) &&
+				          (Mathf.Abs (target.transform.position.y - transform.position.y) > delta)) { 
+					verticalSpeed = BASE_VERTICAL_SPEED;
+				} else {
+					verticalSpeed = 0;
+					dontFollow = true;
+					dontFollowTimer = DONT_FOLLOW_BASE_TIMER;
+				}
 			} else {
-				verticalSpeed = 0;
-				dontFollow = true;
-				dontFollowTimer = DONT_FOLLOW_BASE_TIMER;
+				dontFollowTimer -= Time.deltaTime;
+				if (dontFollowTimer <= 0) {
+					dontFollow = false;
+				}
 			}
-		} else {
-			dontFollowTimer -= Time.deltaTime;
-			if (dontFollowTimer <= 0) {
-				dontFollow = false;
-			}
+			transform.position = transform.position + new Vector3 (0, verticalSpeed * Time.deltaTime, 0);
 		}
-		transform.position = transform.position + new Vector3 (0, verticalSpeed * Time.deltaTime, 0);
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
