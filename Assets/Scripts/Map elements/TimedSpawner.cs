@@ -4,7 +4,7 @@ using System.Collections;
 public class TimedSpawner : MonoBehaviour {
 
 	public GameObject creature;
-	public const float TIME_FOR_SPAWN = 5f;
+	public const float TIME_FOR_SPAWN = 3f;
 	private float timer;
 
 	// Use this for initialization
@@ -18,7 +18,7 @@ public class TimedSpawner : MonoBehaviour {
 
 		if (timer <= 0) {
 			GameObject.Instantiate (creature,transform.position,Quaternion.identity);
-			timer = TIME_FOR_SPAWN - Random.Range (0,2);
+			timer = TIME_FOR_SPAWN + Random.Range (0,4);
 		}
 	}
 }
