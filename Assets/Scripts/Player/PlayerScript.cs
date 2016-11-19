@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviour {
 	public const float SPRINT_DURATION = 0.2f;
 	public const float BASE_SPEED = 4f;
 
+	public GameObject confusedSprite;
+
 	public float speed = BASE_SPEED ;
 	public OxygenManager oxy;
 
@@ -155,5 +157,6 @@ public class PlayerScript : MonoBehaviour {
 	public void InvertControls (bool newState)
 	{
 		invertedControls = newState;
+		confusedSprite.SetActive (newState);
 	}
 }
