@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -25,9 +26,11 @@ public class PlayerScript : MonoBehaviour {
 	private bool accelerated = false;
 	private bool invertedControls = false;
 
+	private Slider healthSlider;
+
 	// Use this for initialization
 	void Start () {
-	
+		healthSlider = GameObject.Find ("HealthSlider").GetComponent <Slider> ();
 	}
 	
 	// Update is called once per frame
@@ -63,6 +66,7 @@ public class PlayerScript : MonoBehaviour {
 	{
 		health -= amount;
 		Debug.Log ("Ouch!");
+		healthSlider.value = health;
 	}
 
 	void CheckDead()
