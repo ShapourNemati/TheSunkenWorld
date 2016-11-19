@@ -18,7 +18,7 @@ public class TridentBehaviour : MonoBehaviour {
 		startingPosition = transform.position;
 
 		AudioSource Audio = GetComponent<AudioSource>();
-		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length)];
 		Audio.Play();
 	}
 	

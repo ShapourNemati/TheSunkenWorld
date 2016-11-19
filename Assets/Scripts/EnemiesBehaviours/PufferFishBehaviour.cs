@@ -24,7 +24,7 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 	// Use this for initialization
 	void Start () {
 		AudioSource Audio = GetComponent<AudioSource>();
-		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length)];
 		int RandomNr = Random.Range(0, 3);
 		if (RandomNr == 0) {
 			Audio.Play();

@@ -65,7 +65,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 			ISkill s = attacks [(int)(Random.value * attacks.Length)];
 
 			//Roll the dice, sex or no?
-			int RandomNr = Random.Range(0, 0);
+			int RandomNr = 0;// Random.Range(0, 10);
 			if (RandomNr == 0) {
 				Audio.Play();
 			}

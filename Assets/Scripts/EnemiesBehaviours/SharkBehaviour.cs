@@ -30,7 +30,7 @@ public class SharkBehaviour : MonoBehaviour {
 	void Start () {
 		target = GameObject.Find ("Player");
 		AudioSource Audio = GetComponent<AudioSource>();
-		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length)];
 		int RandomNr = Random.Range(0, 3);
 		if (RandomNr == 0) {
 			Audio.Play();
