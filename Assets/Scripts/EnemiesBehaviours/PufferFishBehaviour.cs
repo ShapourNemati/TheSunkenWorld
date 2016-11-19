@@ -9,8 +9,8 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 
 	public const int DMG = 15;
 	public bool active = true;
-	public float UPPER_LIMIT = 1f;
-	public float LOWER_LIMIT = -1f;
+	float UPPER_LIMIT = 7f;
+	float LOWER_LIMIT = -7f;
 	public float speed = 0;
 	public bool up = true;
 	public bool vertical = false;
