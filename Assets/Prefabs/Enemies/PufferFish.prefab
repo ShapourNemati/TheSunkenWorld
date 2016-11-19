@@ -119,6 +119,8 @@ MonoBehaviour:
   LOWER_LIMIT: -1.5
   speed: 0
   up: 1
+  SoundEffects:
+  - {fileID: 8300000, guid: 27a010c62526569408da2340ed139284, type: 3}
 --- !u!212 &212000011554309676
 SpriteRenderer:
   m_ObjectHideFlags: 1

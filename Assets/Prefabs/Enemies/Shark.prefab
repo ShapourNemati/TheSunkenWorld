@@ -119,13 +119,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70dcbd4fae6873646b9a7dee4fdd800b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   active: 1
   horizontalSpeed: 6
-  UPPER_LIMIT: 0.6
-  LOWER_LIMIT: -0.6
-  verticalSpeedCounter: 0
-  up: 1
   verticalSpeed: 5
+  BASE_VERTICAL_SPEED: 5
+  SoundEffects:
+  - {fileID: 8300000, guid: d048b6096c4bd5f438ba98dfa3235da3, type: 3}
 --- !u!212 &212000011017499194
 SpriteRenderer:
   m_ObjectHideFlags: 1
