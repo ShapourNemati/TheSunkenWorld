@@ -11,17 +11,22 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 	public float speed = 0;
 	public bool up = true;
 
+	public AudioClip[] SoundEffects;
+
 	public void GetCaptured()
 	{
 		//active = false;
 		// do nothing, PufferFish pops the bubbles
 		Debug.Log ("The pufferfish pops the bubble!");
+	
 	}
 
 
 	// Use this for initialization
 	void Start () {
-	
+		AudioSource Audio = GetComponent<AudioSource>();
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
+		Audio.Play();
 	}
 	
 	// Update is called once per frame
