@@ -3,15 +3,21 @@ using System.Collections;
 
 public class SharkBehaviour : MonoBehaviour {
 
+	public GameObject target;
+
 	public const int DMG = 50;
 	public bool active = true;
 	public float horizontalSpeed = 10f;
 
-	public float UPPER_LIMIT = 1f;
-	public float LOWER_LIMIT = -1f;
-	public float verticalSpeedCounter = 0;
-	public bool up = true;
+	private float delta = .3f;
+
 	public float verticalSpeed = 5;
+	public float BASE_VERTICAL_SPEED = 5;
+
+
+	private bool dontFollow = false;
+	private float dontFollowTimer;
+	public const float DONT_FOLLOW_BASE_TIMER = .3f;
 
 	public void GetCaptured()
 	{
@@ -21,27 +27,31 @@ public class SharkBehaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		target = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		transform.position = transform.position - new Vector3 (horizontalSpeed * Time.deltaTime, 0, 0);
 
-		if (up) {
-			verticalSpeedCounter += Time.deltaTime;
-			if (verticalSpeedCounter >= UPPER_LIMIT) {
-				up = false;
-				verticalSpeed = -1 * verticalSpeed;
+		if (!dontFollow) {
+			if ((target.transform.position.y < transform.position.y) &&
+			    (Mathf.Abs (target.transform.position.y - transform.position.y) > delta)) {
+				verticalSpeed = -1 * BASE_VERTICAL_SPEED;
+			} else if ((target.transform.position.y > transform.position.y) &&
+			           (Mathf.Abs (target.transform.position.y - transform.position.y) > delta)) { 
+				verticalSpeed = BASE_VERTICAL_SPEED;
+			} else {
+				verticalSpeed = 0;
+				dontFollow = true;
+				dontFollowTimer = DONT_FOLLOW_BASE_TIMER;
 			}
 		} else {
-			verticalSpeedCounter -= Time.deltaTime;
-			if (verticalSpeedCounter <= LOWER_LIMIT) {
-				up = true;
-				verticalSpeed = -1 * verticalSpeed;
+			dontFollowTimer -= Time.deltaTime;
+			if (dontFollowTimer <= 0) {
+				dontFollow = false;
 			}
 		}
-
 		transform.position = transform.position + new Vector3 (0, verticalSpeed * Time.deltaTime, 0);
 	}
 
