@@ -9,7 +9,7 @@ public class CreateTrident : MonoBehaviour, ISkill {
 	public void Cast()
 	{
 		Vector3 playerPos = GameObject.Find ("Player").transform.position;
-		Vector3 targetPos = new Vector3 (playerPos.x, -7, playerPos.z);
+		Vector3 targetPos = new Vector3 (playerPos.x, -7, 0);
 		GameObject.Instantiate (Trident, targetPos, Quaternion.identity);
 	}
 

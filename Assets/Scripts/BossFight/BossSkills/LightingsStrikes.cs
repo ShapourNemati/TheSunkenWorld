@@ -6,6 +6,7 @@ public class LightingsStrikes : MonoBehaviour, ISkill {
 
 	public GameObject Lightning;
 	public float offset = 15;
+	public GameObject warning;
 
 	public void Cast()
 	{
@@ -20,6 +21,9 @@ public class LightingsStrikes : MonoBehaviour, ISkill {
 		//middle lightning
 		Vector3 targetPos = playerPos;
 		GameObject.Instantiate (Lightning, targetPos, Quaternion.identity);
+
+		GameObject o = (GameObject) GameObject.Instantiate (warning, new Vector3 (targetPos.x, 4.5f, targetPos.z), Quaternion.identity);
+		GameObject.Destroy (o, 2f);
 
 		//right lightning
 		//targetPos = new Vector3(offset, playerPos.y, playerPos.z);

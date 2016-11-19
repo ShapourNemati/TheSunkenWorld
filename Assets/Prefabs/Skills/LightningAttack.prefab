@@ -53,3 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lightning: {fileID: 1000011289895566, guid: fd8b2e061e2508c4aa79598079f3107f, type: 2}
   offset: 10
+  warning: {fileID: 1000013164990050, guid: b4a1f33ea32a1a743b80955d4a2984d7, type: 2}

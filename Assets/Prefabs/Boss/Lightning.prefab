@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000011289895566
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013553310352
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4000010359963864
 Transform:
   m_ObjectHideFlags: 1
@@ -164,9 +164,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.1293354, y: -0.14908981}
+  m_Offset: {x: -0.71483123, y: -0.14908981}
   serializedVersion: 2
-  m_Size: {x: 7.184559, y: 12.33091}
+  m_Size: {x: 3.6715891, y: 12.33091}
 --- !u!82 &82000012417820544
 AudioSource:
   m_ObjectHideFlags: 1
@@ -310,6 +310,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8158bde4f7894084cb3f496da2e06943, type: 3}
   - {fileID: 8300000, guid: ca46896134cd30a49b685758c350572b, type: 3}
   - {fileID: 8300000, guid: 0648eb68c8c56cf49a0d5e19200332db, type: 3}
+  imgs:
+  - {fileID: 1000011165642240}
+  - {fileID: 1000012586560118}
+  - {fileID: 1000013553310352}
 --- !u!212 &212000010701430944
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -11,6 +11,8 @@ public class LightningBehaviour : MonoBehaviour {
 
 	public AudioClip[] SoundEffects;
 
+	public GameObject[] imgs;
+
 	// Use this for initialization
 	void Start () {
 		AudioSource Audio = GetComponent<AudioSource>();
@@ -24,7 +26,10 @@ public class LightningBehaviour : MonoBehaviour {
 		delay -= Time.deltaTime;
 		if (delay <= 0) {
 			myCollider.enabled = true;
-			if (delay <= -0.2f)
+			foreach (GameObject o in imgs) {
+				o.SetActive (true);
+			}
+			if (delay <= -1f)
 				GameObject.Destroy (gameObject);
 		}
 	
