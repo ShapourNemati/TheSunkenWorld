@@ -18,7 +18,7 @@ public class TimedSpawner : MonoBehaviour {
 
 		if (timer <= 0) {
 			GameObject.Instantiate (creature,transform.position,Quaternion.identity);
-			timer = TIME_FOR_SPAWN;
+			timer = TIME_FOR_SPAWN - Random.Range (0,2);
 		}
 	}
 }
