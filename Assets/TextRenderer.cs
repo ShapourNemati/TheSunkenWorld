@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class TextRender_Intro : MonoBehaviour {
+public class TextRenderer : MonoBehaviour {
 	public string TextPath;
 	public Text MessageText;
 	public int LinesDisplay = 3;
@@ -16,25 +16,25 @@ public class TextRender_Intro : MonoBehaviour {
 	private Dictionary<int, string> Text = new Dictionary<int, string>();
 	private int CurrentLine;
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		bool LoadedText = Load(TextPath);
-		for(CurrentLine = 1; CurrentLine <= LinesDisplay; CurrentLine++) {
+		for (CurrentLine = 1; CurrentLine <= LinesDisplay; CurrentLine++) {
 			MoveToBuffer(CurrentLine);
 		}
 
 		WriteBuffer();
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update() {
 		if (Input.GetKeyUp(KeyCode.DownArrow)) {
 			MoveToBuffer(++CurrentLine);
 			WriteBuffer();
 		}
 
-		if(Input.GetKeyUp(KeyCode.B)) {
+		if (Input.GetKeyUp(KeyCode.B)) {
 			Debug.Log("/----------------------");
-			foreach(var A in TextBuffer) {
+			foreach (var A in TextBuffer) {
 				Debug.Log(" Value: " + A);
 			}
 			Debug.Log("\\-----------------------");
@@ -50,8 +50,8 @@ public class TextRender_Intro : MonoBehaviour {
 		}
 		Text.Remove(LineNr);
 
-		
-		if(TextBuffer.Count >= LinesDisplay) {
+
+		if (TextBuffer.Count >= LinesDisplay) {
 			TextBuffer.RemoveAt(0);
 		}
 
@@ -62,6 +62,14 @@ public class TextRender_Intro : MonoBehaviour {
 		string OutputString = "";
 		foreach (var ThisText in TextBuffer) {
 			OutputString += ThisText + "\n";
+		}
+
+		try {
+			int CheckNextTextLine = CurrentLine + 1;
+			string CheckText = Text[CheckNextTextLine];
+			OutputString += "        (Scroll Down)";
+		} catch (KeyNotFoundException) {
+
 		}
 
 		MessageText.text = OutputString;
@@ -102,7 +110,7 @@ public class TextRender_Intro : MonoBehaviour {
 			// on what didn't work
 			catch (Exception e) {
 			Debug.Log(e.ToString());
-				return false;
+			return false;
 		}
 	}
 }
