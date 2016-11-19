@@ -42,7 +42,7 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if(Random.Range(0,60) == 0) {
+		if(Random.Range(0,240) == 0) {
 			Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
 			Audio.Play();
 		}
