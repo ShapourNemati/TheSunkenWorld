@@ -85,6 +85,7 @@ MonoBehaviour:
   - {fileID: 1000014258130270, guid: 70d40cff348fd694295ad6de0f3b957e, type: 2}
   - {fileID: 1000014095348546, guid: 9255f70fa0bedba46bc37ce3c9537fb0, type: 2}
   - {fileID: 1000014262835492, guid: 000b26020f82ef34d981ee23f0bf98d4, type: 2}
+  - {fileID: 1000010035458374, guid: a52df734fbf19ff4e9036831d561a0f2, type: 2}
 --- !u!212 &212000011418199050
 SpriteRenderer:
   m_ObjectHideFlags: 1
