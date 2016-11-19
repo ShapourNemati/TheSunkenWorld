@@ -4,13 +4,13 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
-	public const float SPRINT_COST = 10f;
+	public const float SPRINT_COST = 20f;
 	public const float SHOOT_COST = 10f;
-	public const float SPEED_COST = 15f;
-	public const float SPEED_MULTIPLIER = 15f;
-	public const float SPRINT_SPEED = 20f;
+	public const float SPEED_COST = 25f;
+	public const float SPEED_MULTIPLIER = 6f;
+	public const float SPRINT_SPEED = 14f;
 	public const float SPRINT_DURATION = 0.2f;
-	public const float BASE_SPEED = 4f;
+	public const float BASE_SPEED = 2f;
 
 	public GameObject confusedSprite;
 
