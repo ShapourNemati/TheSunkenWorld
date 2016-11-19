@@ -14,6 +14,7 @@ public class SharkBehaviour : MonoBehaviour {
 	public float verticalSpeed = 5;
 	public float BASE_VERTICAL_SPEED = 5;
 
+	public AudioClip[] SoundEffects;
 
 	private bool dontFollow = false;
 	private float dontFollowTimer;
@@ -28,6 +29,9 @@ public class SharkBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		target = GameObject.Find ("Player");
+		AudioSource Audio = GetComponent<AudioSource>();
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
+		Audio.Play();
 	}
 	
 	// Update is called once per frame

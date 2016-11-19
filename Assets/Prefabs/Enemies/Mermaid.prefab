@@ -121,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   speed: 7
+  SoundEffects:
+  - {fileID: 8300000, guid: 38938715bd8b5fc44b21d8aeda1c23de, type: 3}
 --- !u!212 &212000012273547900
 SpriteRenderer:
   m_ObjectHideFlags: 1
