@@ -12,6 +12,8 @@ public class PoseidonBehaviour : MonoBehaviour {
 		}
 	}
 
+	int rings = 5;
+
 	public GameObject [] attacksObjs;
 	public ISkill[] attacks;
 	public const float TIME_BETWEEN_ATTACKS = 2f;
@@ -36,6 +38,29 @@ public class PoseidonBehaviour : MonoBehaviour {
 			s.Cast ();
 			Debug.Log ("Speel cast: " + s);
 			timer = TIME_BETWEEN_ATTACKS;
+		}
+	}
+
+	public void NotifyCapture()
+	{
+		rings--;
+
+		switch (rings) {
+		case 4:
+			//increment skill rate
+			break;
+		case 3:
+			//spawn a wave of enemies
+			break;
+		case 2:
+			//send two skills at a time
+			break;
+		case 1:
+			//continuous spawn of enemies
+			break;
+		case 0:
+			//You won!
+			break;
 		}
 	}
 }

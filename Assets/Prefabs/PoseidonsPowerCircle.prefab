@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011020492754}
+  - 114: {fileID: 114000012431032950}
   m_Layer: 0
   m_Name: PoseidonsPowerCircle
   m_TagString: Untagged
@@ -69,6 +70,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011020492754}
   m_RootOrder: 0
+--- !u!114 &114000012431032950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010947560006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e00c4ad108fd9a49bf2a7e3ad92817f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poseidonBehaviour: {fileID: 0}
 --- !u!212 &212000011823413446
 SpriteRenderer:
   m_ObjectHideFlags: 1
