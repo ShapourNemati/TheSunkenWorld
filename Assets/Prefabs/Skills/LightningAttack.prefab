@@ -51,5 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69268ad0ffc4c9a41bc175bb5f633538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lightning: {fileID: 0}
+  Lightning: {fileID: 1000011289895566, guid: fd8b2e061e2508c4aa79598079f3107f, type: 2}
   offset: 10
