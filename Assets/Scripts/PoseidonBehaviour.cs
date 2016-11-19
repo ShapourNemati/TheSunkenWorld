@@ -34,6 +34,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 			ISkill s = attacks [(int)(Random.value * attacks.Length)];
 			//cast the spell
 			s.Cast ();
+			Debug.Log ("Speel cast: " + s);
 			timer = TIME_BETWEEN_ATTACKS;
 		}
 	}

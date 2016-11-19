@@ -191,6 +191,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50000010837374078, guid: e21bfc2293b99fb4d880d460cb06c2fc,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e21bfc2293b99fb4d880d460cb06c2fc, type: 2}
   m_IsPrefabParent: 0
@@ -452,6 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacksObjs:
   - {fileID: 1000014258130270, guid: 70d40cff348fd694295ad6de0f3b957e, type: 2}
+  - {fileID: 1000014095348546, guid: 9255f70fa0bedba46bc37ce3c9537fb0, type: 2}
 --- !u!4 &1768322498
 Transform:
   m_ObjectHideFlags: 0
