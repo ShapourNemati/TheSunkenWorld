@@ -24,6 +24,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 	TimedSpawner[] timedSpawners;
 	TriggerSpawner[] triggerSpawners;
 
+	private bool attackAnimationIsOff = true;
 	private bool doubleTheFun= false;
 
 	// Use this for initialization
@@ -49,13 +50,16 @@ public class PoseidonBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer -= Time.deltaTime;
+		if ((timer <= 0.45) && (attackAnimationIsOff)) {
+			//Change stance
+			GetComponentInChildren <Animator>().SetTrigger ("Attack");
+			attackAnimationIsOff = false;
+		}
 		if (timer <= 0) {
 			//pick a random skill
 			ISkill s = attacks [(int)(Random.value * attacks.Length)];
 			//cast the spell
 			s.Cast ();
-			//Change stance
-			GetComponentInChildren <Animator>().SetTrigger ("Attack");
 			Debug.Log ("Speel cast: " + s);
 			if (doubleTheFun) {
 				//pick a random skill
@@ -65,6 +69,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 				Debug.Log ("Speel cast: " + s);
 			}
 			timer = timeBetweenAttacks;
+			attackAnimationIsOff = true;
 		}
 	}
 
