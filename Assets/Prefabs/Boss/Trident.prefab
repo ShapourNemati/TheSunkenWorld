@@ -38,6 +38,7 @@ GameObject:
   - 50: {fileID: 50000010206018566}
   - 61: {fileID: 61000013191820514}
   - 114: {fileID: 114000014255328156}
+  - 82: {fileID: 82000013703729904}
   m_Layer: 0
   m_Name: Trident
   m_TagString: Untagged
@@ -103,6 +104,80 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.038719654}
   serializedVersion: 2
   m_Size: {x: 1, y: 4.6670656}
+--- !u!82 &82000013703729904
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012693325706}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000014255328156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,6 +193,10 @@ MonoBehaviour:
   speed: 10
   delay: 1
   DMG: 10
+  SoundEffects:
+  - {fileID: 8300000, guid: fb1d5289d8b33df46b83114ccc79f34f, type: 3}
+  - {fileID: 8300000, guid: 5490f3d7f56f51745a93eac0d91cdb27, type: 3}
+  - {fileID: 8300000, guid: 87e8dda4554abf442aba9d66051f2b63, type: 3}
 --- !u!212 &212000013169412438
 SpriteRenderer:
   m_ObjectHideFlags: 1

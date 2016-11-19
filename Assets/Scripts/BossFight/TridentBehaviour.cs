@@ -11,9 +11,15 @@ public class TridentBehaviour : MonoBehaviour {
 
 	public int DMG = 10;
 
+	public AudioClip[] SoundEffects;
+
 	// Use this for initialization
 	void Start () {
 		startingPosition = transform.position;
+
+		AudioSource Audio = GetComponent<AudioSource>();
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
+		Audio.Play();
 	}
 	
 	// Update is called once per frame
