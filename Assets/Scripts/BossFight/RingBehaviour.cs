@@ -22,4 +22,11 @@ public class RingBehaviour : MonoBehaviour, ICapturable {
 	void Update () {
 		transform.position = transform.position - new Vector3 (2 * Time.deltaTime, 0, 0);
 	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.collider.tag == "RemoveGem") {
+			GameObject.Destroy (gameObject);
+		}
+
+	}
 }
