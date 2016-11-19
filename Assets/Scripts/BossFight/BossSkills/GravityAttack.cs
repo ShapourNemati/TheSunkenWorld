@@ -16,6 +16,7 @@ public class GravityAttack : MonoBehaviour , ISkill{
 	void Start () {
 		active = true;
 		GameObject.Find ("Player").GetComponent<Rigidbody2D>().AddForce(Physics.gravity * intensity);
+		GameObject.Find ("strongGravity").GetComponent <SpriteRenderer>().enabled = true;
 	}
 	
 	// Update is called once per frame
@@ -24,6 +25,7 @@ public class GravityAttack : MonoBehaviour , ISkill{
 			duration -= Time.deltaTime;
 		if (duration <= 0) {
 			GameObject.Find ("Player").GetComponent<Rigidbody2D>().AddForce(-Physics.gravity * intensity);
+			GameObject.Find ("strongGravity").GetComponent <SpriteRenderer>().enabled = false;
 			GameObject.Destroy (gameObject);
 		}
 
