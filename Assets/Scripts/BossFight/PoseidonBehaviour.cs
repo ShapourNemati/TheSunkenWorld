@@ -61,6 +61,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 			break;
 		case 3:
 			//spawn a wave of enemies
+			//done by activating a trigger spawner
 			break;
 		case 2:
 			//send two skills at a time
@@ -68,9 +69,11 @@ public class PoseidonBehaviour : MonoBehaviour {
 			break;
 		case 1:
 			//continuous spawn of enemies
+			//done by instantiating some timed spawners
 			break;
 		case 0:
 			//You won!
+			//Time to choose: are you with Poseidon or against him?
 			break;
 		}
 	}
