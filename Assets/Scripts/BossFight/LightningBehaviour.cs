@@ -14,7 +14,7 @@ public class LightningBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		AudioSource Audio = GetComponent<AudioSource>();
-		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length)];
+		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length-1)];
 		Audio.Play();
 	}
 
