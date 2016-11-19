@@ -24,12 +24,17 @@ public class PoseidonBehaviour : MonoBehaviour {
 	TimedSpawner[] timedSpawners;
 	TriggerSpawner[] triggerSpawners;
 
+	public AudioClip[] SoundEffects;
+	AudioSource Audio;
+
 	private bool attackAnimationIsOff = true;
 	private bool doubleTheFun= false;
 
 	// Use this for initialization
 	void Start () {
 		timer = timeBetweenAttacks;
+		Audio = GetComponent<AudioSource>();
+		Audio.clip = SoundEffects[0];
 
 		attacks = new ISkill[attacksObjs.Length];
 		for (int i = 0; i < attacksObjs.Length; i++) {
@@ -58,6 +63,13 @@ public class PoseidonBehaviour : MonoBehaviour {
 		if (timer <= 0) {
 			//pick a random skill
 			ISkill s = attacks [(int)(Random.value * attacks.Length)];
+
+			//Roll the dice, sex or no?
+			int RandomNr = (int)Random.Range(1, 10);
+			if (RandomNr == 1) {
+				Audio.Play();
+			}
+
 			//cast the spell
 			s.Cast ();
 			Debug.Log ("Speel cast: " + s);
