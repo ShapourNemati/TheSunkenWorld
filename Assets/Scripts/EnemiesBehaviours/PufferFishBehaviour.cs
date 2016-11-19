@@ -4,6 +4,9 @@ using AssemblyCSharp;
 
 public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 
+
+	public GameObject myParticleSystem;
+
 	public const int DMG = 15;
 	public bool active = true;
 	public float UPPER_LIMIT = 1f;
@@ -11,6 +14,7 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 	public float speed = 0;
 	public bool up = true;
 	public bool vertical = false;
+
 
 	public AudioClip[] SoundEffects;
 
@@ -24,6 +28,7 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 
 	// Use this for initialization
 	void Start () {
+		myParticleSystem.SetActive (false);
 		AudioSource Audio = GetComponent<AudioSource>();
 		Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length)];
 		int RandomNr = Random.Range(0, 3);
@@ -56,8 +61,16 @@ public class PufferFishBehaviour : MonoBehaviour, ICapturable {
 			if (playerScript != null) {
 				playerScript.TakeDamage (DMG);
 				//TODO: fade instead of disappearing instantly
-				GameObject.Destroy (gameObject);
+				Explode ();
 			}
 		}
+	}
+
+	void Explode() {
+		myParticleSystem.SetActive (true);
+		var exp = GetComponentInChildren<ParticleSystem>();
+		exp.Play();
+		GetComponentInChildren <SpriteRenderer>().enabled = false;
+		Destroy(gameObject, exp.duration);
 	}
 }
