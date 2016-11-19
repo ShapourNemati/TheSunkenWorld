@@ -54,6 +54,8 @@ public class PoseidonBehaviour : MonoBehaviour {
 			ISkill s = attacks [(int)(Random.value * attacks.Length)];
 			//cast the spell
 			s.Cast ();
+			//Change stance
+			GetComponentInChildren <Animator>().SetTrigger ("Attack");
 			Debug.Log ("Speel cast: " + s);
 			if (doubleTheFun) {
 				//pick a random skill
