@@ -9,6 +9,7 @@ public class RingBehaviour : MonoBehaviour, ICapturable {
 
 	// Use this for initialization
 	void Start () {
+		poseidonBehaviour = GameObject.Find ("Poseidon").GetComponent <PoseidonBehaviour>();
 	}
 
 	public void GetCaptured()
@@ -19,6 +20,6 @@ public class RingBehaviour : MonoBehaviour, ICapturable {
 
 	// Update is called once per frame
 	void Update () {
-	
+		transform.position = transform.position - new Vector3 (2 * Time.deltaTime, 0, 0);
 	}
 }
