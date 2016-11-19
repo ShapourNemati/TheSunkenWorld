@@ -9,6 +9,8 @@ public class TridentBehaviour : MonoBehaviour {
 	public float delay = 1f;
 	bool moving = false;
 
+	public int DMG = 10;
+
 	// Use this for initialization
 	void Start () {
 		startingPosition = transform.position;
@@ -27,6 +29,14 @@ public class TridentBehaviour : MonoBehaviour {
 				GameObject.Destroy (gameObject);
 			}
 		}
+	}
 
+	public void OnTriggerEnter2D(Collider2D other)
+	{
+		var playerScript = other.GetComponent<PlayerScript>();
+		if (playerScript != null) {
+			playerScript.TakeDamage (DMG);
+			GameObject.Destroy (gameObject);
+		}
 	}
 }

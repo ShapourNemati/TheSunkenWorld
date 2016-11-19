@@ -22,4 +22,6 @@ public class CreateTrident : MonoBehaviour, ISkill {
 	void Update () {
 	
 	}
+
+
 }
