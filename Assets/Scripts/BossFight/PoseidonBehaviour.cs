@@ -16,7 +16,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 
 	public GameObject [] attacksObjs;
 	public ISkill[] attacks;
-	public float timeBetweenAttacks = 2f;
+	public float timeBetweenAttacks = 3f;
 	float timer = 0;
 
 	private bool doubleTheFun= false;
@@ -39,7 +39,6 @@ public class PoseidonBehaviour : MonoBehaviour {
 			//cast the spell
 			s.Cast ();
 			Debug.Log ("Speel cast: " + s);
-			timer = timeBetweenAttacks;
 			if (doubleTheFun) {
 				//pick a random skill
 				s = attacks [(int)(Random.value * attacks.Length)];
@@ -47,6 +46,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 				s.Cast ();
 				Debug.Log ("Speel cast: " + s);
 			}
+			timer = timeBetweenAttacks;
 		}
 	}
 
@@ -57,7 +57,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 		switch (rings) {
 		case 4:
 			//increment skill rate by 25%
-			timeBetweenAttacks/=3/4;
+			timeBetweenAttacks=2f;
 			break;
 		case 3:
 			//spawn a wave of enemies

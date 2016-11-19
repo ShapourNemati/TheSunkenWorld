@@ -14,6 +14,7 @@ public class RingBehaviour : MonoBehaviour, ICapturable {
 	public void GetCaptured()
 	{
 		poseidonBehaviour.NotifyCapture ();
+		GameObject.Destroy (gameObject);
 	}
 
 	// Update is called once per frame
