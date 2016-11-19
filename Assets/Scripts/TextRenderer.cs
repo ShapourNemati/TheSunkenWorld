@@ -17,7 +17,7 @@ public class TextRenderer : MonoBehaviour {
 	private int CurrentLine;
 	// Use this for initialization
 	void Start() {
-		bool LoadedText = Load(TextPath);
+		Load(TextPath);
 		for (CurrentLine = 1; CurrentLine <= LinesDisplay; CurrentLine++) {
 			MoveToBuffer(CurrentLine);
 		}

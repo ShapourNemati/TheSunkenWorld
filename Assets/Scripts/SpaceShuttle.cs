@@ -9,11 +9,8 @@ public class SpaceShuttle : MonoBehaviour {
 
 	private float InitialDiffernece;
 	private Vector3 InitialScale;
-	private Vector3 StartPosition;
-	private float Timer = 0;
 	// Use this for initialization
 	void Start () {
-		StartPosition = transform.position;
 		InitialScale = transform.localScale;
 		InitialDiffernece = GetDistance(transform.position, Target.transform.position);
 	}
