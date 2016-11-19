@@ -23,6 +23,7 @@ public class PlayerScript : MonoBehaviour {
 	private float sprintingTimer = 0f;
 
 	private bool accelerated = false;
+	private bool invertedControls = false;
 
 	// Use this for initialization
 	void Start () {
@@ -74,15 +75,27 @@ public class PlayerScript : MonoBehaviour {
 	void HandleInput()
 	{
 		if (!sprinting) {
-			// Movement
-			if (Input.GetKey (KeyCode.A))
-				transform.position = transform.position - new Vector3 (speed * Time.deltaTime, 0, 0);
-			if (Input.GetKey (KeyCode.S))
-				transform.position = transform.position - new Vector3 (0, speed * Time.deltaTime, 0);
-			if (Input.GetKey (KeyCode.D))
-				transform.position = transform.position + new Vector3 (speed * Time.deltaTime, 0, 0);
-			if (Input.GetKey (KeyCode.W))
-				transform.position = transform.position + new Vector3 (0, speed * Time.deltaTime, 0);
+			if (!invertedControls) {
+				// Movement
+				if (Input.GetKey (KeyCode.A))
+					transform.position = transform.position - new Vector3 (speed * Time.deltaTime, 0, 0);
+				if (Input.GetKey (KeyCode.S))
+					transform.position = transform.position - new Vector3 (0, speed * Time.deltaTime, 0);
+				if (Input.GetKey (KeyCode.D))
+					transform.position = transform.position + new Vector3 (speed * Time.deltaTime, 0, 0);
+				if (Input.GetKey (KeyCode.W))
+					transform.position = transform.position + new Vector3 (0, speed * Time.deltaTime, 0);
+			} else {
+				if (Input.GetKey (KeyCode.A))
+					transform.position = transform.position + new Vector3 (speed * Time.deltaTime, 0, 0);
+				if (Input.GetKey (KeyCode.S))
+					transform.position = transform.position + new Vector3 (0, speed * Time.deltaTime, 0);
+				if (Input.GetKey (KeyCode.D))
+					transform.position = transform.position - new Vector3 (speed * Time.deltaTime, 0, 0);
+				if (Input.GetKey (KeyCode.W))
+					transform.position = transform.position - new Vector3 (0, speed * Time.deltaTime, 0);
+				
+			}
 		}
 		//Skills
 
@@ -132,7 +145,11 @@ public class PlayerScript : MonoBehaviour {
 				accelerated = false;
 			}
 		}
-
 			
+	}
+
+	public void InvertControls (bool newState)
+	{
+		invertedControls = newState;
 	}
 }
