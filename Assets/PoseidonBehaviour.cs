@@ -4,6 +4,7 @@ using AssemblyCSharp;
 
 public class PoseidonBehaviour : MonoBehaviour {
 
+
 	public class TestSkill : ISkill {
 		public void Cast()
 		{
@@ -11,6 +12,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 		}
 	}
 
+	public GameObject [] attacksObjs;
 	public ISkill[] attacks;
 	public const float TIME_BETWEEN_ATTACKS = 2f;
 	float timer = 0;
@@ -18,8 +20,10 @@ public class PoseidonBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		timer = TIME_BETWEEN_ATTACKS;
-		attacks = new ISkill[1];
-		attacks [0] = new TestSkill ();
+		attacks = new ISkill[attacksObjs.Length];
+		for (int i = 0; i < attacksObjs.Length; i++) {
+			attacks [i] = attacksObjs [i].GetComponent <ISkill> ();	
+		}
 	}
 	
 	// Update is called once per frame
