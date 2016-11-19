@@ -15,18 +15,34 @@ public class PoseidonBehaviour : MonoBehaviour {
 	int rings = 5;
 
 	public GameObject [] attacksObjs;
-	public ISkill[] attacks;
+	ISkill[] attacks;
 	public float timeBetweenAttacks = 3f;
 	float timer = 0;
+
+	public GameObject[] timedSpawnersObj;
+	public GameObject[] triggerSpawnersObj;
+	TimedSpawner[] timedSpawners;
+	TriggerSpawner[] triggerSpawners;
 
 	private bool doubleTheFun= false;
 
 	// Use this for initialization
 	void Start () {
 		timer = timeBetweenAttacks;
+
 		attacks = new ISkill[attacksObjs.Length];
 		for (int i = 0; i < attacksObjs.Length; i++) {
 			attacks [i] = attacksObjs [i].GetComponent <ISkill> ();	
+		}
+
+		timedSpawners = new TimedSpawner[timedSpawnersObj.Length];
+		for (int i = 0; i < timedSpawnersObj.Length; i++) {
+			timedSpawners [i] = timedSpawnersObj [i].GetComponent<TimedSpawner> ();
+		}
+
+		triggerSpawners = new TriggerSpawner[triggerSpawnersObj.Length];
+		for (int i = 0; i < triggerSpawnersObj.Length; i++) {
+			triggerSpawners [i] = triggerSpawnersObj [i].GetComponent<TriggerSpawner> ();
 		}
 	}
 	
@@ -62,6 +78,9 @@ public class PoseidonBehaviour : MonoBehaviour {
 		case 3:
 			//spawn a wave of enemies
 			//done by activating a trigger spawner
+			foreach (TriggerSpawner ts in triggerSpawners) {
+				ts.Spawn ();
+			}
 			break;
 		case 2:
 			//send two skills at a time
@@ -69,7 +88,10 @@ public class PoseidonBehaviour : MonoBehaviour {
 			break;
 		case 1:
 			//continuous spawn of enemies
-			//done by instantiating some timed spawners
+			//done by activating some inactive timed spawners
+			foreach (TimedSpawner ts in timedSpawners) {
+				ts.enabled = true;
+			}
 			break;
 		case 0:
 			//You won!

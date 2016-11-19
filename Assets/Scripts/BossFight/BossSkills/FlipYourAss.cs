@@ -15,7 +15,7 @@ public class FlipYourAss : MonoBehaviour, ISkill {
 	// Use this for initialization
 	void Start () {
 		active = true;
-		GameObject.Find ("Player").transform.Rotate (new Vector3(0,180,0));
+		//GameObject.Find ("Player").transform.Rotate (new Vector3(0,180,0));
 		GameObject.Find ("Player").GetComponent<PlayerScript> ().InvertControls (true);
 	}
 
@@ -24,7 +24,7 @@ public class FlipYourAss : MonoBehaviour, ISkill {
 		if (active)
 			duration -= Time.deltaTime;
 		if (duration <= 0) {
-			GameObject.Find ("Player").transform.Rotate (new Vector3(0,-180,0));
+			//GameObject.Find ("Player").transform.Rotate (new Vector3(0,-180,0));
 			GameObject.Find ("Player").GetComponent<PlayerScript> ().InvertControls (false);
 			GameObject.Destroy (gameObject);
 		}
