@@ -23,7 +23,7 @@ public class LightingsStrikes : MonoBehaviour, ISkill {
 		GameObject.Instantiate (Lightning, targetPos, Quaternion.identity);
 
 		GameObject o = (GameObject) GameObject.Instantiate (warning, new Vector3 (targetPos.x, 4.5f, targetPos.z), Quaternion.identity);
-		GameObject.Destroy (o, 2f);
+		GameObject.Destroy (o, 1.5f);
 
 		//right lightning
 		//targetPos = new Vector3(offset, playerPos.y, playerPos.z);

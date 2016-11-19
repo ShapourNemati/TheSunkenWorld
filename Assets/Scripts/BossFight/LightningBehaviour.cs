@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LightningBehaviour : MonoBehaviour {
 
-	public float delay = 2f;
+	float delay = 1.5f;
 
 	public int DMG = 30;
 
@@ -29,7 +29,7 @@ public class LightningBehaviour : MonoBehaviour {
 			foreach (GameObject o in imgs) {
 				o.SetActive (true);
 			}
-			if (delay <= -1f)
+			if (delay <= -.5f)
 				GameObject.Destroy (gameObject);
 		}
 	
