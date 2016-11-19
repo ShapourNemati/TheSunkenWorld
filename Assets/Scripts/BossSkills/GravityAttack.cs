@@ -20,11 +20,9 @@ public class GravityAttack : MonoBehaviour , ISkill{
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (duration);
 		if (active)
 			duration -= Time.deltaTime;
 		if (duration <= 0) {
-			Debug.Log ("About to destroy");
 			GameObject.Find ("Player").GetComponent<Rigidbody2D>().AddForce(-Physics.gravity * intensity);
 			GameObject.Destroy (gameObject);
 		}
