@@ -30,14 +30,23 @@ public class PlayerScript : MonoBehaviour {
 
 	private Slider healthSlider;
 
+	public AudioClip[] SoundEffects;
+	private AudioSource Audio;
+
 	// Use this for initialization
 	void Start () {
 		healthSlider = GameObject.Find ("HealthSlider").GetComponent <Slider> ();
+		Audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+		if(Random.Range(0,240) == 0) {
+			Audio.clip = SoundEffects[Random.Range(0, SoundEffects.Length - 1)];
+			Audio.Play();
+		}
+
 		HandleInput ();
 		if (sprinting) {
 			sprintingTimer -= Time.deltaTime;
