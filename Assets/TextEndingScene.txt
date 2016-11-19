@@ -1,4 +1,3 @@
-**POSEIDON SPEAKING**
 Thou have defeted me.
 I am now under your command!
 
@@ -15,5 +14,4 @@ You really want to be on their side?
 
 [Click _ to join Poseidon as a ruler of the sea]
 [Click _ to force Poesidon to lower the sea levels]
-
 
