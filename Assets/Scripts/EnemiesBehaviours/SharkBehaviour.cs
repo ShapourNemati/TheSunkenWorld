@@ -68,6 +68,8 @@ public class SharkBehaviour : MonoBehaviour {
 			var playerScript = other.GetComponent<PlayerScript>();
 			if (playerScript != null) {
 				playerScript.TakeDamage (DMG);
+				//TODO: fade instead of disappearing instantly
+				GameObject.Destroy (gameObject);
 			}
 		}
 	}

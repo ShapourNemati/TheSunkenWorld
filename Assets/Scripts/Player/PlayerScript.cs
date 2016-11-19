@@ -76,14 +76,14 @@ public class PlayerScript : MonoBehaviour {
 	public void TakeDamage(int amount)
 	{
 		health -= amount;
-		Debug.Log ("Ouch!");
 		healthSlider.value = health;
+		CheckDead ();
 	}
 
 	void CheckDead()
 	{
 		if (health <= 0) {
-			//reload level?
+			this.enabled = false;
 		}
 	}
 
