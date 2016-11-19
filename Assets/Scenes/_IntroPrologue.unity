@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff6b9a19c37e0d4cbb5e6253139e5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextPath: Assets/IntroText.txt
+  TextPath: Assets/TextIntro.txt
   MessageText: {fileID: 1593559307}
   LinesDisplay: 5
 --- !u!114 &828549057
@@ -611,9 +611,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu
-    turpis ultrices, venenatis quam et, venenatis tellus. In quis lorem vitae urna
-    fermentum mattis eu vel libero. '
+  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu turpis
+    ultrices, venenatis quam et, venenatis
 --- !u!222 &1593559308
 CanvasRenderer:
   m_ObjectHideFlags: 0
