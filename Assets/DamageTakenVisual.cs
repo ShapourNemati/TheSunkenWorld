@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DamageTakenVisual : MonoBehaviour {
 
-	public float duration = 1f;
+	public float duration = 0.25f;
 
 	// Use this for initialization
 	void Start () {
@@ -12,12 +12,8 @@ public class DamageTakenVisual : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 		duration -= Time.deltaTime;
-
-		Color c = GetComponent<SpriteRenderer> ().color;
-		c.a = duration;
-		GetComponent<SpriteRenderer> ().color = c;
-
+		if (duration <= 0)
+			GameObject.Destroy (gameObject);	
 	}
 }
