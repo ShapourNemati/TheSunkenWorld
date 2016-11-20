@@ -1,4 +1,4 @@
-xThou have defeted me.
+Thou have defeted me.
 I am now under your command!
 
 But let me tell you, why I did what I did…
@@ -12,6 +12,6 @@ I mean, look how easily they just left.
 
 You really want to be on their side?
 
-[Click _ to join Poseidon as a ruler of the sea]
-[Click _ to force Poesidon to lower the sea levels]
+[Click "D" to join Poseidon as a ruler of the sea]
+[Click "H" to force Poesidon to lower the sea levels]
 
