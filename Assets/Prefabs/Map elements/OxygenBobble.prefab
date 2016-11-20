@@ -37,6 +37,7 @@ GameObject:
   - 4: {fileID: 4000014041532776}
   - 58: {fileID: 58000012418489538}
   - 114: {fileID: 114000012338441136}
+  - 114: {fileID: 114000013153036340}
   m_Layer: 0
   m_Name: OxygenBobble
   m_TagString: Untagged
@@ -97,6 +98,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VALUE: 50
+--- !u!114 &114000013153036340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012165468476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6aaf245439c5a94d9028ba3ef220333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.25
+  FadeOnStart: 0
 --- !u!212 &212000011018980760
 SpriteRenderer:
   m_ObjectHideFlags: 1

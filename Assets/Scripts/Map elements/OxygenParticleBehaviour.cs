@@ -21,7 +21,7 @@ public class OxygenParticleBehaviour : MonoBehaviour {
 		var playerScript = other.GetComponent<PlayerScript>();
 		if (playerScript != null) {
 			playerScript.GainOxygen (VALUE);
-			GameObject.Destroy (gameObject);
+			GetComponent <FadeAway>().StartFading ();
 		}
 	}
 }
