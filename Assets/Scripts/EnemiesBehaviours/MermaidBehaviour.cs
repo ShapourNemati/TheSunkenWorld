@@ -42,8 +42,7 @@ public class MermaidBehaviour : MonoBehaviour, ICapturable {
 			var playerScript = other.GetComponent<PlayerScript>();
 			if (playerScript != null) {
 				playerScript.TakeDamage (DMG);
-				//TODO: fade instead of disappearing instantly
-				GameObject.Destroy (gameObject);
+				GetComponent <FadeAway>().StartFading();
 			}
 		}
 	}

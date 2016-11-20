@@ -39,6 +39,7 @@ GameObject:
   - 114: {fileID: 114000012905949228}
   - 50: {fileID: 50000010994997066}
   - 82: {fileID: 82000012286271704}
+  - 114: {fileID: 114000013079795860}
   m_Layer: 0
   m_Name: Mermaid
   m_TagString: Untagged
@@ -285,6 +286,18 @@ MonoBehaviour:
   bubble: {fileID: 1000013121464816}
   SoundEffects:
   - {fileID: 8300000, guid: 38938715bd8b5fc44b21d8aeda1c23de, type: 3}
+--- !u!114 &114000013079795860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012779688082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6aaf245439c5a94d9028ba3ef220333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5
 --- !u!212 &212000010021572420
 SpriteRenderer:
   m_ObjectHideFlags: 1
