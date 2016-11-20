@@ -26,7 +26,7 @@ public class RingBehaviour : MonoBehaviour, ICapturable {
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.collider.tag == "RemoveGem") {
-			GameObject.Destroy (gameObject);
+			GetComponent <FadeAway>().StartFading();
 		}
 
 	}
