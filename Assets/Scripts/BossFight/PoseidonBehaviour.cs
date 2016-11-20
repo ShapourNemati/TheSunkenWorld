@@ -107,8 +107,8 @@ public class PoseidonBehaviour : MonoBehaviour {
 		case 2:
 			//send two skills at a time
 			doubleTheFun = true;
-			break;
 			text.GetComponent<Text>().text = "Gems: 3/5";
+			break;
 		case 1:
 			//continuous spawn of enemies
 			//done by activating some inactive timed spawners
