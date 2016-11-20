@@ -15,6 +15,7 @@ public class RingBehaviour : MonoBehaviour, ICapturable {
 	public void GetCaptured()
 	{
 		poseidonBehaviour.NotifyCapture ();
+		Camera.main.GetComponent <RandomShake>().PlayShake ();
 		GameObject.Destroy (gameObject);
 	}
 
