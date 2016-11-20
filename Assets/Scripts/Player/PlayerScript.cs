@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour {
 
 	public GameObject retryText;
 
+	public GameObject hitVisual;
+
 	public GameObject confusedSprite;
 
 	public float speed = BASE_SPEED ;
@@ -79,6 +81,7 @@ public class PlayerScript : MonoBehaviour {
 	{
 		health -= amount;
 		healthSlider.value = health;
+		GameObject.Instantiate (hitVisual, transform.position, Quaternion.identity);
 		CheckDead ();
 	}
 
