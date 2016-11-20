@@ -6,9 +6,11 @@ public class FadeAway : MonoBehaviour {
 	public float duration = .5f;
 	private bool fading = false;
 
+	public bool FadeOnStart = false;
+
 	// Use this for initialization
 	void Start () {
-	
+		if (FadeOnStart) StartFading();
 	}
 
 	public void StartFading()
