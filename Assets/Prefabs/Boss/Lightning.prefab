@@ -303,8 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6dae716d9910e344a3bc2875a28bdc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 2
-  DMG: 30
+  DMG: 20
   myCollider: {fileID: 61000012494195422}
   SoundEffects:
   - {fileID: 8300000, guid: 8158bde4f7894084cb3f496da2e06943, type: 3}
