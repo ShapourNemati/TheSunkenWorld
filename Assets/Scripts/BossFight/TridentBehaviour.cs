@@ -4,7 +4,7 @@ using System.Collections;
 public class TridentBehaviour : MonoBehaviour {
 
 	Vector3 startingPosition;
-	public float distance = 10f;
+	public float distance = 30f;
 	public float speed = 10f;
 	public float delay = 1f;
 	bool moving = false;

@@ -28,6 +28,7 @@ public class LightningBehaviour : MonoBehaviour {
 			myCollider.enabled = true;
 			foreach (GameObject o in imgs) {
 				o.SetActive (true);
+				Camera.main.GetComponent <RandomShake>().PlayShake ();
 			}
 			if (delay <= -.5f)
 				GameObject.Destroy (gameObject);

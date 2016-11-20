@@ -38,6 +38,7 @@ GameObject:
   - 114: {fileID: 114000012431032950}
   - 50: {fileID: 50000010679727956}
   - 58: {fileID: 58000010309976762}
+  - 114: {fileID: 114000012329858612}
   m_Layer: 0
   m_Name: PoseidonsPowerCircle
   m_TagString: Untagged
@@ -103,6 +104,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.92469025
+--- !u!114 &114000012329858612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010947560006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6aaf245439c5a94d9028ba3ef220333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5
 --- !u!114 &114000012431032950
 MonoBehaviour:
   m_ObjectHideFlags: 1
