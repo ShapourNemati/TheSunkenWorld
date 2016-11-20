@@ -1272,6 +1272,34 @@ Prefab:
       propertyPath: retryText
       value: 
       objectReference: {fileID: 225702812}
+    - target: {fileID: 212000013857329542, guid: e21bfc2293b99fb4d880d460cb06c2fc,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ef445418cc161cc43b5f589f4e6be3b9,
+        type: 3}
+    - target: {fileID: 212000012217845622, guid: e21bfc2293b99fb4d880d460cb06c2fc,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bde73bff71283624189372fed4c5504e,
+        type: 3}
+    - target: {fileID: 4000012451018034, guid: e21bfc2293b99fb4d880d460cb06c2fc, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012451018034, guid: e21bfc2293b99fb4d880d460cb06c2fc, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010255195452, guid: e21bfc2293b99fb4d880d460cb06c2fc, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010255195452, guid: e21bfc2293b99fb4d880d460cb06c2fc, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e21bfc2293b99fb4d880d460cb06c2fc, type: 2}
   m_IsPrefabParent: 0
