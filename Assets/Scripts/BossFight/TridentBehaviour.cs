@@ -42,7 +42,7 @@ public class TridentBehaviour : MonoBehaviour {
 		var playerScript = other.GetComponent<PlayerScript>();
 		if (playerScript != null) {
 			playerScript.TakeDamage (DMG);
-			GameObject.Destroy (gameObject);
+			GetComponent <FadeAway>().StartFading();
 		}
 	}
 }
