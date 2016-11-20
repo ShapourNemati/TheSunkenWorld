@@ -55,6 +55,7 @@ GameObject:
   - 60: {fileID: 60000010337139124}
   - 114: {fileID: 114000012896235152}
   - 82: {fileID: 82000010649900018}
+  - 114: {fileID: 114000011048692890}
   m_Layer: 0
   m_Name: Shark
   m_TagString: Untagged
@@ -222,6 +223,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000011048692890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013364263710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6aaf245439c5a94d9028ba3ef220333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5
 --- !u!114 &114000012896235152
 MonoBehaviour:
   m_ObjectHideFlags: 1

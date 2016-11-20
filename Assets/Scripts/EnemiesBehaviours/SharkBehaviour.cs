@@ -4,7 +4,7 @@ using AssemblyCSharp;
 
 public class SharkBehaviour : MonoBehaviour, ICapturable {
 
-	public GameObject target;
+	GameObject target;
 
 	public const int DMG = 20;
 	public bool active = true;
@@ -75,8 +75,7 @@ public class SharkBehaviour : MonoBehaviour, ICapturable {
 			var playerScript = other.GetComponent<PlayerScript>();
 			if (playerScript != null) {
 				playerScript.TakeDamage (DMG);
-				//TODO: fade instead of disappearing instantly
-				GameObject.Destroy (gameObject);
+				GetComponent <FadeAway>().StartFading();
 			}
 		}
 	}
