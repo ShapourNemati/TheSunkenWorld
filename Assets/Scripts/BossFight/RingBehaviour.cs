@@ -16,7 +16,7 @@ public class RingBehaviour : MonoBehaviour, ICapturable {
 	{
 		poseidonBehaviour.NotifyCapture ();
 		Camera.main.GetComponent <RandomShake>().PlayShake ();
-		GameObject.Destroy (gameObject);
+		GetComponent <FadeAway>().StartFading();
 	}
 
 	// Update is called once per frame
