@@ -2,6 +2,7 @@
 using System.Collections;
 using AssemblyCSharp;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PoseidonBehaviour : MonoBehaviour {
 
@@ -122,6 +123,7 @@ public class PoseidonBehaviour : MonoBehaviour {
 			//You won!
 			//Time to choose: are you with Poseidon or against him?
 			Debug.Log ("YOU WON THE GAME. Gj dude, gj");
+				SceneManager.LoadScene("_Ending");
 			break;
 		}
 	}
