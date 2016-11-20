@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0139de1880f3434b8473c451ea49a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowOxy: {fileID: 1000013881695736, guid: 8a4d94be92f5d2845a0033dfb66dae86, type: 2}
   retryText: {fileID: 0}
   hitVisual: {fileID: 1000012840737988, guid: 385a95cd004a0c74baae9d7ab1629f15, type: 2}
   confusedSprite: {fileID: 1000013924147946}

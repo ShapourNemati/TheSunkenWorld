@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour {
 	public const float SPRINT_DURATION = 0.2f;
 	public const float BASE_SPEED = 5f;
 
+	public GameObject lowOxy;
 	public GameObject retryText;
 
 	public GameObject hitVisual;
@@ -131,8 +132,7 @@ public class PlayerScript : MonoBehaviour {
 				speed = SPRINT_SPEED;
 				sprintingTimer = SPRINT_DURATION;
 			} else {
-				//TODO: give the user some actual feedback
-				Debug.Log ("Not enough oxygen");
+				GameObject.Instantiate (lowOxy, gameObject.transform.position, Quaternion.identity);
 			}
 
 		}
@@ -145,8 +145,7 @@ public class PlayerScript : MonoBehaviour {
 				//If oxygen is good, shoot
 				GameObject.Instantiate (projectile, ProjectileSpawnLocation.transform.position, Quaternion.identity);
 			} else {
-				//TODO: give the user some actual feedback
-				Debug.Log ("Not enough oxygen");
+				GameObject.Instantiate (lowOxy, gameObject.transform.position, Quaternion.identity);
 			}
 		}
 
@@ -157,9 +156,8 @@ public class PlayerScript : MonoBehaviour {
 				//If oxygen is good, shoot
 				accelerated = true;
 				speed = SPEED_MULTIPLIER;
-			} else {
-				//TODO: give the user some actual feedback
-				Debug.Log ("Not enough oxygen");
+			} else {	
+				GameObject.Instantiate (lowOxy, gameObject.transform.position, Quaternion.identity);
 			}
 		} else {
 			if (accelerated) {		
